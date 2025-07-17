@@ -11,7 +11,7 @@ In your project's library folder:
 At the top of your main.cpp or main.ino:
 ```cpp
     #include "provisioner.h"
-    Provision.provisioner
+    Provision provisioner
 ```
 Inside your code:
 ```cpp

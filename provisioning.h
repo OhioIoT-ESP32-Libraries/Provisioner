@@ -30,9 +30,6 @@
 
 #define PROVISIONING_SERVER_TIMEOUT 300000
 
-#ifndef PROVISIONING_PIN
-    #define PROVISIONING_PIN 0
-#endif
 
 
 class Provisioning {
@@ -55,22 +52,22 @@ class Provisioning {
 		char _pass[32];
 		
 		// provisioning.cpp
-			void _setup_access_point();
-			void _wait_for_completion();
+		void _setup_access_point();
+		void _wait_for_completion();
+		void _stop_provisioning();
 
 		// provisioning_routes.cpp
-			void _set_core_routes();
-			void _set_extraneous_windows_routes();
-			void _set_android_routes();
-			void _set_ios_routes();
+		void _set_core_routes();
+		void _set_extraneous_windows_routes();
+		void _set_android_routes();
+		void _set_ios_routes();
 
-			void _stop_provisioning();
-			void _send_config();
+		void _send_config();
 
 		
 
 };
 
-extern Provisioning provisioning;
+extern Provisioning provisioning;	// call "Provisioner provisioner" once in main.cpp
 
 #endif
